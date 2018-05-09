@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "User";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Library.Models.User
+
+<h2>User History</h2>
+
+    <div>
+        @Html.LabelFor(m => m.Id)
+        @Html.TextBoxFor(m => m.Id,new {@class ="textbox" })
+        @Html.ValidationMessageFor(m=>m.Id)
+   </div>
+   <input type="submit" class="button" value="GetHistory" onclick="fetchData"/>
+
+
+<div id="displayuser"> </div>
+
+
+@*--------------------------- bootstrap code for the paging---------------------- *@
+
+<nav aria-label="Page navigation example active">
+    <ul class="pagination justify-content-end ">
+        <li class="page-item ">
+                 <a id="pageprevious" class="page-link"  tabindex="-1">Previous</a>
+        </li>
+        <li class="page-item"><a id="page1" class="page-link" >1</a></li>
+        <li class="page-item"><a id="page2" class="page-link" >2</a></li>
+        <li id ="container_listitem" class="page-item"><a id="page3" class="page-link" >3</a></li>
+        <li class="page-item"><a id="pagenext" class="page-link">Next</a></li>
+    </ul>
+</nav>
+
+
+    @* -------------Bootstrap code for popup user book issue history------------- *@
+<div id="myModal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document" style="width:900px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Book Issue History</h4>
+            </div>
+            <div id="bodytodisplay" class="modal-body">
+                content to display here...
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@* -----------------including Js script file which performs ajax call for book issue history----------------- *@
+<script src="~/Content/scripts/BookIssueHistoryByUserID.js"></script>
+
+@* -------------------js script for paging and ajax call for all user list  ----------------------- *@
+<script src="~/Content/scripts/UserListpaging11.js"></script>
+
+<script src="~/Content/scripts/pageevent.js"></script>

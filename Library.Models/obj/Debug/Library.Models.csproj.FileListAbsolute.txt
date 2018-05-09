@@ -1,0 +1,4 @@
+C:\Users\Rajat Sharma\Documents\Visual Studio 2015\Projects\Library\Library.Models\bin\Debug\Library.Models.dll
+C:\Users\Rajat Sharma\Documents\Visual Studio 2015\Projects\Library\Library.Models\bin\Debug\Library.Models.pdb
+C:\Users\Rajat Sharma\Documents\Visual Studio 2015\Projects\Library\Library.Models\obj\Debug\Library.Models.dll
+C:\Users\Rajat Sharma\Documents\Visual Studio 2015\Projects\Library\Library.Models\obj\Debug\Library.Models.pdb

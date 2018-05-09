@@ -1,0 +1,23 @@
+2018-05-03 12:20:45,147 [11] INFO Library.Repository.UserRepository - Zero Total USer count received from sql
+2018-05-03 12:58:14,539 [24] INFO Library.Repository.UserRepository - Zero Total USer count received from sql
+2018-05-03 13:59:04,557 [20] INFO Library.Repository.UserRepository - Zero Total USer count received from sql
+2018-05-03 14:30:48,454 [31] INFO Library.Repository.UserRepository - Zero Total USer count received from sql
+2018-05-03 14:34:43,467 [35] INFO Library.Repository.UserRepository - Zero Total USer count received from sql
+2018-05-03 14:56:00,574 [31] INFO Library.Repository.UserRepository - Zero Total USer count received from sql
+2018-05-03 15:09:13,952 [38] INFO Library.Repository.UserRepository - System.Data.SqlClient.SqlException (0x80131904): The number of rows provided for a FETCH clause must be greater then zero.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.<>c__DisplayClass189_0.<ReadAsync>b__0(Task t)
+   at System.Data.SqlClient.SqlDataReader.InvokeRetryable[T](Func`2 moreFunc, TaskCompletionSource`1 source, IDisposable objectToDispose)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Library.Repository.UserRepository.<GetAllUserAsync>d__6.MoveNext() in C:\Users\Rajat Sharma\Documents\Visual Studio 2015\Projects\Library\Library.Repository\UserRepository.cs:line 172
+ClientConnectionId:3c4a627e-5f08-4722-934e-f5d00ff4d471
+Error Number:10744,State:1,Class:15
+2018-05-04 14:30:31,748 [6] INFO Library.Repository.UserRepository - Zero Total USer count received from sql

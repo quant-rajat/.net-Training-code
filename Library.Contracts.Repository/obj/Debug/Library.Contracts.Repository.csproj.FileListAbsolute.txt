@@ -1,0 +1,7 @@
+C:\Users\Rajat Sharma\Documents\Visual Studio 2015\Projects\Library\Library.Contracts.Repository\bin\Debug\Library.Contracts.Repository.dll
+C:\Users\Rajat Sharma\Documents\Visual Studio 2015\Projects\Library\Library.Contracts.Repository\bin\Debug\Library.Contracts.Repository.pdb
+C:\Users\Rajat Sharma\Documents\Visual Studio 2015\Projects\Library\Library.Contracts.Repository\bin\Debug\Library.Models.dll
+C:\Users\Rajat Sharma\Documents\Visual Studio 2015\Projects\Library\Library.Contracts.Repository\bin\Debug\Library.Models.pdb
+C:\Users\Rajat Sharma\Documents\Visual Studio 2015\Projects\Library\Library.Contracts.Repository\obj\Debug\Library.Contracts.Repository.csprojResolveAssemblyReference.cache
+C:\Users\Rajat Sharma\Documents\Visual Studio 2015\Projects\Library\Library.Contracts.Repository\obj\Debug\Library.Contracts.Repository.dll
+C:\Users\Rajat Sharma\Documents\Visual Studio 2015\Projects\Library\Library.Contracts.Repository\obj\Debug\Library.Contracts.Repository.pdb

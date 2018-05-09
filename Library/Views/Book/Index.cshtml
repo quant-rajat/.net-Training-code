@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "View";
+}
+@model Library.Models.BookModel
+
+<h2>Find Book by Entering Id here</h2>
+@using (Html.BeginForm("Index", "Book", FormMethod.Post))
+{
+    <div>
+        @Html.LabelFor(m => m.id)
+        @Html.TextBoxFor(m=>m.id)
+        @Html.ValidationMessageFor(m=>m.id)
+
+    </div>
+   
+    <input type="submit" value="Find"/>
+}

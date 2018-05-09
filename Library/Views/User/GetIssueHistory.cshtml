@@ -1,0 +1,99 @@
+﻿@using Library.Utility 
+@model IEnumerable<Library.Models.IssuedBook>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BookId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BookCopyId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Author)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Edition)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IssueDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProjectedReturnDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActualReturnDate)
+        </th>
+        <th></th>
+    </tr>
+   
+
+
+@foreach (var item in Model) {
+
+    var status= item.ListIssuedBooksWithStatus();
+    var color = "BLACK";
+    if (status == BookStatus.notreturned)
+    {
+        color = "YELLOW";
+    }
+    else if (status == BookStatus.notreturnedwarning)
+    {
+        color = "ORANGE";
+    }
+    else if(status== BookStatus.notreturnedlatewarning)
+    {
+        color = "RE D";
+    }
+    else if (status == BookStatus.returned)
+    {
+        color = "BLUE";
+    }
+
+
+    <tr style="color:@Html.Raw(color)">
+        <td>
+            @Html.DisplayFor(modelItem => item.BookId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BookCopyId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Author)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Edition)
+        </td>
+        <td>
+            @item.IssueDate.ToString("dd-MMM-yyyy")
+        </td>
+        <td>
+            @item.ProjectedReturnDate.ToString("dd-MMM-yyyy")
+        </td>
+        <td>
+            @{
+                if (item.ActualReturnDate.HasValue)
+                    {
+                    @Convert.ToDateTime(item.ActualReturnDate).ToString("dd-MMM-yyyy")
+                    }
+                        else
+                        {
+                    @(new HtmlString("Not Returned."))
+                        }
+
+                    }
+
+        </td>
+    </tr>
+}
+
+</table>
+
+
+

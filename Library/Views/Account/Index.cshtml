@@ -1,0 +1,34 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Library.Models.AccountViewModels.LoginViewModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @Html.ValidationSummary()
+
+    @using (Html.BeginForm("Index", "Account", FormMethod.Post))
+    { 
+    <div> 
+        @Html.LabelFor(m => m.Username)
+        @Html.TextBoxFor(m => m.Username)
+        @Html.ValidationMessageFor(m=>m.Username)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Password)
+        @Html.PasswordFor(m => m.Password)
+        @Html.ValidationMessageFor(m=>m.Password)
+    </div>
+    <div>
+       <input type="submit" value="Login" />
+    </div>
+       }
+</body>
+</html>
